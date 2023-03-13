@@ -9,7 +9,6 @@
       <div>Age: {{age}} </div>
       <div>Gender: {{gender}} </div>
       <hr />
-
       <div>
         {{#each education}}
                  <h3> Education </h3>
@@ -52,7 +51,6 @@
       <hr>
       <div>
         <h3>Work Experience</h3>
-        
         {{#each workExperience}}
         <ul>  
           <li>
@@ -74,7 +72,6 @@
                 <br>
                 <div><b>Projects:</b></div>
               </li>
-              
               {{#each projects}}
               <ul>
                 <li>
@@ -98,14 +95,12 @@
                             <br>
                             <li>
                               <div><b>Team members:</b></div>
-                              
                               {{#each  team_members}}
                                   <div>
                                  {{>link text=name href=email blank=true noLine=true}}
                                  ({{title}})  
                                   </div>
                                  <br>
-
                                   <div><b>Skills:</b></div>
                                  <div>
                                   <ul>
@@ -123,9 +118,7 @@
                                     <li>
                                       <div>
                                         <u> {{name}} ({{description}})</u>
-                                          
                                       </div>
-                                          
                                           <br>
                                               <div><b>Technologies:</b></div>
                                               {{#each technologies}}
@@ -174,8 +167,6 @@
           {{/with}}
         </address>
       </div>
-
     </div>
-
   </div>
 {{/with}}
