@@ -1,10 +1,5 @@
-{{! 
-  Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
-  І котрий обгортає код container файлів для будь-яких ендпоїнтів
-}}
-
+{{!-- Main page --}}
 <html>
-
   <head>
     <title>
       {{page.title}}
@@ -15,7 +10,6 @@
   </head>
 {{!-- ---------------------------------------------------------------------------------------------- --}}
   <body>
-
 	{{#with header}}
     <header>
       <div>
@@ -41,12 +35,8 @@
       <hr />
     </header>
 	{{/with}}
-
 	{{> nav}}
- 
     {{{body}}}
-
-	{{> footer}}
+	{{> footer address=header.address firstname=header.name.firstname lastname=header.name.lastname}}
   </body>
-
 </html>

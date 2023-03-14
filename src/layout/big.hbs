@@ -1,23 +1,22 @@
-
-
+{{!-- Big page --}}
 <html>
-
-  <head>
-    <title>
-      {{page.title}}
+    <head>
+      <title>
+        {{page.title}}
     </title>
     <meta charset='utf-8' />
     <link href='css/index.css' rel='stylesheet' />
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  </head>
-{{!-- ------------------------------------------------------------------------------------------------- --}}
-  <body>
-
-	{{> nav}}
-<hr>
-    {{{body}}}
-
-	{{> footer}}	
-  </body>
-
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/favicon-16x16.png'
+    />
+    {{!-- ------------------------------------------------------------------------------------------------- --}}
+    <body>
+        {{> nav}}
+      <hr>
+        {{{body}}}
+      {{> footer address=header.address firstname=header.name.firstname lastname=header.name.lastname}}
+    </body>
 </html>
