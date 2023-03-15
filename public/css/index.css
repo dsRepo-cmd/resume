@@ -13,30 +13,3 @@ footer,
 nav {
   margin: 32px;
 }
-
-section {
-  padding: 16px;
-}
-
-table {
-  margin-left: 1cm;
-}
-
-th {
-  text-align: left;
-}
-td {
-  /* border: 1px solid rgb(238, 6, 6); */
-  text-align: left;
-  padding-left: 0.5cm;
-}
-
-th,
-td {
-  /* padding: 10px; */
-}
-caption {
-  font-size: 20px;
-  color: rgb(4, 4, 4);
-  text-align: left;
-}
