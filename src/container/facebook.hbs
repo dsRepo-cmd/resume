@@ -1,0 +1,115 @@
+<div class='p-4'>
+  <div>
+  <h2>{{name}}</h2>
+  <hr>
+    {{#each users}}
+      <div>
+        <h3>{{name}}</h3>
+      </div>
+      <div>
+        gender:
+        {{gender}}
+      </div>
+      <div>
+        age:
+        {{age}}
+      </div>
+      <div>
+        id:
+        {{id}}
+      </div>
+        <div>
+          <br>
+  {{!-- ---Friends--------------------------------------------------------------------------------- --}}
+            <div class='p-4'>
+        <h4 >Friends</h4>       
+        {{#each friends}}
+                <div>
+                   <h3>{{name}}</h3>
+                </div>
+                <div>
+                  gender:
+                  {{gender}}
+                </div>
+                <div>
+                  age:
+                  {{age}}
+                </div>
+                <div>
+                  id:
+                  {{id}}
+                </div>
+                <hr>
+                <div class="p-4">
+                  <h4> Mutual friends</h4>
+                {{#each mutual_friends}}
+                <div>
+                   <h3>{{name}}</h3>
+                </div>
+                <div>
+                  gender:
+                  {{gender}}
+                </div>
+                <div>
+                  age:
+                  {{age}}
+                </div>
+                <div>
+                  id:
+                  {{id}}
+                </div>
+                {{/each}}
+                <hr>
+                </div>
+            </div>
+        {{/each}}
+            <hr />
+  {{!-- ---Friends end------------------------------------------------------------------------------ --}}
+{{!-- ---Groups--------------------------------------------------------------------------------- --}}
+      <div class='p-4'>
+        {{#if groups }}
+        <h4 >Groups</h4>       
+        {{#each groups}}
+              <div>
+                   <h3>{{name}}</h3>
+              </div>
+              <div>
+                  description:
+                  {{description}}
+              </div>
+              <div>
+                  id:
+                  {{id}}
+              </div>
+                <hr>
+              <div class="p-4">
+                  <h4>Members </h4>
+                {{#each members}}
+              <div>
+                   <h3>{{name}}</h3>
+              </div>
+              <div>
+                  gender:
+                  {{gender}}
+              </div>
+              <div>
+                  age:
+                  {{age}}
+              </div>
+              <div>
+                  id:
+                  {{id}}
+              </div>
+                {{/each}}
+                <hr>
+              </div>
+      </div>
+        {{/each}}
+            <hr />
+      {{/if}}      
+{{!-- ---Groups end------------------------------------------------------------------------------- --}}
+    {{/each}}
+      </div>
+
+  </div>
+</div>
