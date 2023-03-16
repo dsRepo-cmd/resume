@@ -168,11 +168,11 @@ router.get('/education', function (req, res) {
       ],
       educations: [
         {
-          name: 'КПЕК НАУ',
+          name: 'Kyiv Industrial and Economic College of the National Academy of Management',
           isEnd: true,
         },
         {
-          name: 'Академія муніціпального управління',
+          name: 'Academy of Municipal Administration',
           isEnd: true,
         },
         {
