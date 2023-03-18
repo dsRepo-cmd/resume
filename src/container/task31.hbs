@@ -1,16 +1,12 @@
 <main>
   <section class='row g-5'>
     {{! _________________________________________________________________________________________ }}
-
     {{#with navigation}}
       <div class='col-9'>
         <div class='row'>
           {{#each links}}
-
             <a class='col-1' href='{{href}}'>{{text}}</a>
-
           {{/each}}
-
           <a
             class='col-1 btn btn-primary btn-sm'
             href='{{button.href}}'
@@ -18,7 +14,6 @@
         </div>
       </div>
     {{/with}}
-
     <hr />
     {{! _Header_________________________________________________________________________ }}
     {{#with header}}
@@ -37,7 +32,6 @@
       <div class='h2'>{{title}}</div>
       <div class='col-9'>
         <div class='row'>
-
           {{#each cards}}
             <div class='g-4 col-6'>
               <div class='card card h-100'>
@@ -50,16 +44,13 @@
                   <div class='h4 card-title'>
                     {{title}}
                   </div>
-
                   <p class='card-text'>
                     {{description}}
                   </p>
-
                   <a
                     href='{{button.href}}'
                     class='btn btn-primary'
                   >{{button.text}}</a>
-
                 </div>
               </div>
             </div>
@@ -109,9 +100,7 @@
       <h2>{{title}}</h2>
       {{#each cards}}
         <div class='col-3 gx-2'>
-
           <div class='card h-100'>
-
             <div class='card-header'>
               {{name}}
             </div>
@@ -179,7 +168,6 @@
     {{! __proposition__________________________________________________________________________________ }}
     {{#with proposition}}
       <p class='display-2'>{{title}}</p>
-
       {{#each card}}
         <div class='col-3'>
           <div
@@ -199,7 +187,6 @@
     <hr />
     {{! Footer__________________________________________________________________________________ }}
     {{#with footer}}
-
       <h5>{{title}}</h5>
       <div class='col-2'>
         {{#each navigation}}
@@ -211,7 +198,6 @@
           </p>
         {{/each}}
       </div>
-
       <div class='col-2'>
         {{#each socialMedia}}
           <p>
@@ -222,7 +208,6 @@
           </p>
         {{/each}}
       </div>
-
       <div class='col-2'>
         {{#each partners}}
           <p>
@@ -233,8 +218,6 @@
           </p>
         {{/each}}
       </div>
-
     {{/with}}
   </section>
-
 </main>
