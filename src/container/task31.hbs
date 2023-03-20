@@ -10,6 +10,7 @@
           <a
             class='col-1 btn btn-primary btn-sm'
             href='{{button.href}}'
+            target='_blank'
           >{{button.text}}</a>
         </div>
       </div>
@@ -23,6 +24,7 @@
         <a
           class='btn btn-primary'
           href='{{button.link}}'
+          target='_blank'
         >{{button.text}}</a>
       </div>
     {{/with}}
@@ -39,6 +41,7 @@
                   class='card-img-top'
                   src='{{picture.src}}'
                   alt='{{picture.alt}}'
+                  target='_blank'
                 />
                 <div class='card-body'>
                   <div class='h4 card-title'>
@@ -50,6 +53,7 @@
                   <a
                     href='{{button.href}}'
                     class='btn btn-primary'
+                    target='_blank'
                   >{{button.text}}</a>
                 </div>
               </div>
@@ -101,7 +105,7 @@
       {{#each cards}}
         <div class='col-3 gx-2'>
           <div class='card h-100'>
-            <div class='card-header'>
+            <div class='card-header h-100'>
               {{name}}
             </div>
             {{#each items}}
@@ -194,6 +198,7 @@
             <a
               class='text-primary btn btn-outline-light btn-sm'
               href='{{href}}'
+              target='_blank'
             >{{text}}</a>
           </p>
         {{/each}}
@@ -204,6 +209,7 @@
             <a
               class='btn btn-outline-dark btn-sm'
               href='{{link}}'
+              target='_blank'
             >{{name}}</a>
           </p>
         {{/each}}
@@ -214,6 +220,7 @@
             <a
               class='btn btn-outline-info btn-sm'
               href='{{link}}'
+              target='_blank'
             >{{name}}</a>
           </p>
         {{/each}}

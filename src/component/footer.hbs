@@ -1,6 +1,5 @@
-	<br>
-	<hr>
-	<footer>
+<footer>
+  <hr class="my-5">
 	<div>
 		{{#with footer.social}}
 			{{>link text=email.text href=email.href blank=true}}
@@ -8,14 +7,12 @@
 			{{>link text=linkedin.text href=linkedin.href blank=true noLine=true}}
 		{{/with}}
 	</div>
-	<br>
-	<div>
-		<em>&#xa9; {{firstname}} {{lastname}} </em>
+	<div class="my-3">
+	  <em>&#xa9; {{firstname}} {{lastname}} </em>
 	</div>
-	<br />
-		<div>
-			<address>
-				{{address}}
-			</address>	
-		</div>
-  	</footer>
+	<div>
+		<address>
+			{{address}}
+		</address>	
+	</div>
+</footer>

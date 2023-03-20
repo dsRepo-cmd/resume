@@ -1,15 +1,3 @@
 html {
   /* max-width: 900px; */
 }
-
-body {
-  margin: 32px;
-  background: #dddcdc;
-}
-
-main,
-header,
-footer,
-nav {
-  margin: 32px;
-}
