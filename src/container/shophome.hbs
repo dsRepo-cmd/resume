@@ -7,7 +7,7 @@
       <div class='nav'>
         {{#each links}}
           <div class='nav-item'>
-            <a class='nav-link' href='{{href}}'>{{text}}</a>
+            <a class='nav-link' target="_blank" href='{{href}}'>{{text}}</a>
           </div>
         {{/each}}
         <div class='nav-item'>
@@ -102,20 +102,17 @@
             {{#each buttons}}
               <a
                 target='_blank'
-                rel='{{type}}'
+                rel='{{rel}}'
                 class='btn btn-primary m-2'
                 href='{{link}}'
               >{{text}}</a>
             {{/each}}
           </div>
         </div>
-
       </div>
     </div>
-
   {{/with}}
   <hr class='my-5' />
-
   {{! service___________________________________________________________ }}
   {{#with service}}
     <div class='col-12'>
@@ -127,7 +124,7 @@
           {{#each buttons}}
             <a
               target='_blank'
-              rel='{{type}}'
+              rel='{{rel}}'
               class='btn btn-primary'
               href='{{link}}'
             >{{text}}</a>
@@ -135,7 +132,6 @@
         </div>
       </div>
     </div>
-
   {{/with}}
   <hr class='my-5' />
   {{! footer___________________________________________________________ }}
@@ -171,5 +167,4 @@
       {{/each}}
     </div>
   </div>
-
 </div>
