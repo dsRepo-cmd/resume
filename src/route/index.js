@@ -1824,7 +1824,7 @@ router.get('/shopproduct', function (req, res) {
     ],
 
     productData: {
-      img: 'https://picsum.photos/400/200',
+      img: 'https://picsum.photos/800/400',
 
       info: {
         title: 'Product PC Asus 331 BC 671',

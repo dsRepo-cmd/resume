@@ -1,155 +1,130 @@
-<h2>{{name}}</h2>
-<hr />
-<div>
-  <b>{{occupation}}</b>
-  <p>
-    {{birthdate}}
-    -
-    {{deathdate}}
-  </p>
-  <p>
-    {{birthplace}}
-  </p>
-  <p>
-  </p>
-  <p>
-    <em>
-      {{nationality}}
-    </em>
-  </p>
-  <hr />
-
-  <div><h3>Known For </h3></div>
-  <div>
-    <ul>
-      {{#each known_for}}
-        <li>
-          {{this}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-  <hr />
-
-  <div><h3>Education </h3></div>
-  {{#each education}}
-    <div>
-      <ul>
-        <li>
-          <b> {{degree}} </b>
-          ({{field}})
-          <p>
-            {{institution}}
-            ({{year}})
-          </p>
-        </li>
-      </ul>
-    </div>
-  {{/each}}
-  <hr />
-
-  <div><h3>Notable publications</h3></div>
-  <div>
-    <ol>
-      {{#each notable_publications}}
-        <li>
-          <div>
-            <cite>{{title}}</cite>
-            ({{year}}) -
-            {{publisher}}
-          </div>
-          <br />
+ {{! _breadcrumb_________________________________________________________________________________________ }}
+  <div class='col-12'>
+    <ol class='breadcrumb'>
+      {{#each breadcrumb}}
+        <li class='breadcrumb-item'>
+          {{#if url}}
+            <a href='{{url}}' class=''>{{name}}</a>
+          {{else}}
+            {{name}}
+          {{/if}}
         </li>
       {{/each}}
     </ol>
   </div>
-  <hr />
+  {{! _breadcrumb_________________________________________________________________________________________ }}
+  {{#with productData}}
+    <div class='col-6'>
+      <div class="card mb-4">
+        <img class='' src='{{img}}' alt='' />
+      </div>
+ {{! _info_________________________________________________________________________________________ }}
 
-  <div><h3>Partners</h3></div>
-  <ul>
-    {{#each partners}}
-      <li>
-        <b> {{name}} </b>
-        <div>
-          {{relationship}}
-          ({{years}})
+      {{#with info}}
+        <div class='card'>
+          <div class='card-body'>
+            <h4 class='card-title'>{{title}}</h4>
+            <p>{{about}}</p>
+            <h3>{{price}}
+              <div class="mt-2">
+                {{#each category}}
+                  {{#if isHot}}
+                    <span
+                      class='badge text-bg-warning rounded-pill'
+                    >{{name}}</span>
+                  {{/if}}
+                  {{#if isNew}}
+                    <span
+                      class='badge text-bg-primary rounded-pill'
+                    >{{name}}</span>
+                  {{/if}}
+                  {{#if isBonus}}
+                    <span
+                      class='badge text-bg-info rounded-pill'
+                    >{{name}}</span>
+                  {{/if}}
+                {{/each}}
+              </div>
+            </h3>
+          </div>
         </div>
-        <br />
-      </li>
-    {{/each}}
-  </ul>
-  <hr />
-
-  <div><h3>Awards</h3></div>
-  {{#each awards}}
-    <div>
-      <b>{{title}}</b>
-      ({{year}})
-      <p>{{description}}</p>
+      {{/with}}
     </div>
-  {{/each}}
-  <hr />
+      <div class="col-1">
+      </div>
+    {{! item__________________________________________________________________________________________ }}
 
-  <div><h3>Influences</h3></div>
-  <div>
-    {{#each influences}}
-      <ul>
-        <li>
-          {{this}}
-        </li>
-      </ul>
-    {{/each}}
-  </div>
-  <hr />
+<div class='col-5'>
+    {{#with item}}
+        <div>
+          <table class='table'>
+            <thead>
+              <tr>
+                {{#each head}}
+                  <th>{{this}}</th>
+                {{/each}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each body}}
 
-  <div><h3>Influenced</h3></div>
-  <div>
-    {{#each influenced}}
-      <ul>
-        <li>
-          {{this}}
-        </li>
-      </ul>
-    {{/each}}
-  </div>
-  <hr />
-
-  <div><h3>Quotes</h3></div>
-  <div>
-    {{#each quotes}}
-      <ul>
-        <q>
-          {{this}}
-        </q>
-      </ul>
-    {{/each}}
-  </div>
-  <hr />
-
-  <div><h3>Major discoveries</h3></div>
-  <div>
-    {{#each major_discoveries}}
-      <ul>
-        <li>
-          {{title}}
-          {{year}}
-          {{description}}
-        </li>
-      </ul>
-    {{/each}}
-  </div>
-  <hr />
-
-  <div><h3>Contributions</h3></div>
-  <div>
-    {{#with contributions}}
-      <b>{{title}} </b>
-      - ({{year}})
-      <p>
-        {{description}}
-        <em>{{field}}</em>
-      </p>
+                <tr>
+                  <th>{{@index}}</th>
+                  {{#each this}}
+                    {{#if @first}}{{else}}
+                      <td>{{this}}</td>
+                    {{/if}}
+                  {{/each}}
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+      </div>
     {{/with}}
-  </div>
-
+    {{! param_________________________________________________________________________________________ }}
+    {{#with param}}
+        <div class='card mt-5'>
+          <div class='card-header'>
+            <h4>{{title}}</h4>
+          </div>  
+          <ul class="list-group list-group-flush">
+            {{#each list}}
+            <li class="list-group-item">
+              {{this}}
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/with}}
+    {{! actionList__________________________________________________________________________________________ }}
+    {{#with alert}}
+      {{#if isError}}
+      <div class="alert alert-danger mt-5">
+        <p class="mt-2">{{text}}</p>
+      </div>
+      {{/if}}
+    {{/with}}
 </div>
+     {{! actionList__________________________________________________________________________________________ }}
+
+  <div class="col-12 my-4">
+    <div class="card">
+      <div class="card-body">
+        {{#each actionList}}
+          <button class="btn {{#if isWarning}}btn-warning{{/if}} 
+          {{#if isError}}btn-outline-danger{{/if}} {{#if isSuccess}}btn-success{{/if}}
+          {{#if isGood}}btn-outline-success{{/if}} mx-2"
+          >{{name}}</button>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{/with}}
+  <hr class="my-5">
+     {{! goodsOtherBlock__________________________________________________________________________________________ }}
+  {{#with goodsOtherBlock}}
+  <div class="h1 text-center mb-4">{{title}}</div>
+    {{>shopcard}}
+  {{/with}}
+
+
