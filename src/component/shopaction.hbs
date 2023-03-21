@@ -1,0 +1,17 @@
+<hr class='my-5' />
+{{! service__________________________________________________________________________________________ }}
+{{#with service}}
+  <div class='card text-bg-success text-center p-3'>
+    <div class='h2 text-center'>{{title}}</div>
+    <p class='text-center'>{{description}}</p>
+    {{#each buttons}}
+      <div class='text-centr'>
+        <a
+          class='btn btn-primary'
+          href='{{link}}'
+          rel='rel'
+        >{{text}}</a>
+      </div>
+    {{/each}}
+  </div>
+{{/with}}
