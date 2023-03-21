@@ -1,0 +1,27 @@
+<h2 class='mt-5 text-center'>{{title}}</h2>
+{{#each cards}}
+  <div class='col-3 g-4'>
+    <div class='card h-100 text-bg-dark'>
+      <div class='card-header'>
+        <h6>
+          {{title}}
+          {{#if isTop}}
+            <span
+              class='badge text-bg-danger rounded-pill'
+            >Top
+            </span>
+          {{/if}}
+          {{#if idNew}}
+            <span
+              class='badge text-bg-success rounded-pill'
+            >New
+            </span>
+          {{/if}}
+        </h6>
+      </div>
+      <div class='card-body'>
+        {{description}}
+      </div>
+    </div>
+  </div>
+{{/each}}
