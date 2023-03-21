@@ -1,102 +1,98 @@
 {{>breadcrumb}}
-  {{! _productData_________________________________________________________________________________________ }}
-  {{#with productData}}
-    <div class='col-6'>
-      <div class="card mb-4">
-        <img class='' src='{{img}}' alt='' />
-      </div>
- {{! _info_________________________________________________________________________________________ }}
-
-      {{#with info}}
-        <div class='card'>
-          <div class='card-body'>
-            <h4 class='card-title'>{{title}}</h4>
-            <p>{{about}}</p>
-            <h3>{{price}}
-              <div class="mt-2">
-                {{#each category}}
-                  {{#if isHot}}
-                    <span
-                      class='badge text-bg-warning rounded-pill'
-                    >{{name}}</span>
-                  {{/if}}
-                  {{#if isNew}}
-                    <span
-                      class='badge text-bg-primary rounded-pill'
-                    >{{name}}</span>
-                  {{/if}}
-                  {{#if isBonus}}
-                    <span
-                      class='badge text-bg-info rounded-pill'
-                    >{{name}}</span>
-                  {{/if}}
-                {{/each}}
-              </div>
-            </h3>
-          </div>
-        </div>
-      {{/with}}
+{{! _productData_________________________________________________________________________________________ }}
+{{#with productData}}
+  <div class='col-6'>
+    <div class='card mb-4'>
+      <img class='' src='{{img}}' alt='' />
     </div>
-      <div class="col-1">
+    {{! _info_________________________________________________________________________________________ }}
+    {{#with info}}
+      <div class='card'>
+        <div class='card-body'>
+          <h4 class='card-title'>{{title}}</h4>
+          <p>{{about}}</p>
+          <h3>{{price}}
+            <div class='mt-2'>
+              {{#each category}}
+                {{#if isHot}}
+                  <span
+                    class='badge text-bg-warning rounded-pill'
+                  >{{name}}</span>
+                {{/if}}
+                {{#if isNew}}
+                  <span
+                    class='badge text-bg-primary rounded-pill'
+                  >{{name}}</span>
+                {{/if}}
+                {{#if isBonus}}
+                  <span
+                    class='badge text-bg-info rounded-pill'
+                  >{{name}}</span>
+                {{/if}}
+              {{/each}}
+            </div>
+          </h3>
+        </div>
       </div>
-    {{! item__________________________________________________________________________________________ }}
-
-<div class='col-5'>
+    {{/with}}
+  </div>
+  <div class='col-1'>
+  </div>
+  {{! item__________________________________________________________________________________________ }}
+  <div class='col-5'>
     {{#with item}}
-        <div>
-          <table class='table'>
-            <thead>
+      <div>
+        <table class='table'>
+          <thead>
+            <tr>
+              {{#each head}}
+                <th>{{this}}</th>
+              {{/each}}
+            </tr>
+          </thead>
+          <tbody>
+            {{#each body}}
               <tr>
-                {{#each head}}
-                  <th>{{this}}</th>
+                <th>{{@index}}</th>
+                {{#each this}}
+                  {{#if @first}}{{else}}
+                    <td>{{this}}</td>
+                  {{/if}}
                 {{/each}}
               </tr>
-            </thead>
-            <tbody>
-              {{#each body}}
-
-                <tr>
-                  <th>{{@index}}</th>
-                  {{#each this}}
-                    {{#if @first}}{{else}}
-                      <td>{{this}}</td>
-                    {{/if}}
-                  {{/each}}
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
+            {{/each}}
+          </tbody>
+        </table>
       </div>
     {{/with}}
     {{! param_________________________________________________________________________________________ }}
     {{#with param}}
-        <div class='card mt-5'>
-          <div class='card-header'>
-            <h4>{{title}}</h4>
-          </div>  
-          <ul class="list-group list-group-flush">
-            {{#each list}}
-            <li class="list-group-item">
+      <div class='card mt-5'>
+        <div class='card-header'>
+          <h4>{{title}}</h4>
+        </div>
+        <ul class='list-group list-group-flush'>
+          {{#each list}}
+            <li class='list-group-item'>
               {{this}}
             </li>
-            {{/each}}
-          </ul>
-        </div>
-      {{/with}}
+          {{/each}}
+        </ul>
+      </div>
+    {{/with}}
     {{! actionList__________________________________________________________________________________________ }}
     {{#with alert}}
       {{#if isError}}
-      <div class="alert alert-danger mt-5">
-        <p class="mt-2">{{text}}</p>
-      </div>
+        <div class='alert alert-danger mt-5'>
+          <p class='mt-2'>{{text}}</p>
+        </div>
       {{/if}}
     {{/with}}
-</div>
-     {{! actionList__________________________________________________________________________________________ }}
-
-  <div class="col-12 my-4">
-    <div class="card">
-      <div class="card-body">
+  </div>
+  {{! actionList__________________________________________________________________________________________ }}
+  <div class='col-12 my-4'>
+    <div class='card'>
+      <div class='card-body'>
         {{#each actionList}}
           <button class="btn {{#if isWarning}}btn-warning{{/if}} 
           {{#if isError}}btn-outline-danger{{/if}} {{#if isSuccess}}btn-success{{/if}}
@@ -106,10 +102,10 @@
       </div>
     </div>
   </div>
-  {{/with}}
-  <hr class="my-5">
-     {{! goodsOtherBlock__________________________________________________________________________________________ }}
-  {{#with goodsOtherBlock}}
-  <div class="h1 text-center mb-4">{{title}}</div>
-    {{>shopcard}}
-  {{/with}}
+{{/with}}
+<hr class='my-5' />
+{{! goodsOtherBlock__________________________________________________________________________________________ }}
+{{#with goodsOtherBlock}}
+  <div class='h1 text-center mb-4'>{{title}}</div>
+  {{>shopcard}}
+{{/with}}
