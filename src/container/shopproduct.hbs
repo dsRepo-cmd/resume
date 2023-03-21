@@ -1,18 +1,5 @@
- {{! _breadcrumb_________________________________________________________________________________________ }}
-  <div class='col-12'>
-    <ol class='breadcrumb'>
-      {{#each breadcrumb}}
-        <li class='breadcrumb-item'>
-          {{#if url}}
-            <a href='{{url}}' class=''>{{name}}</a>
-          {{else}}
-            {{name}}
-          {{/if}}
-        </li>
-      {{/each}}
-    </ol>
-  </div>
-  {{! _breadcrumb_________________________________________________________________________________________ }}
+{{>breadcrumb}}
+  {{! _productData_________________________________________________________________________________________ }}
   {{#with productData}}
     <div class='col-6'>
       <div class="card mb-4">
@@ -126,5 +113,3 @@
   <div class="h1 text-center mb-4">{{title}}</div>
     {{>shopcard}}
   {{/with}}
-
-
