@@ -6,17 +6,23 @@
   <div class='col-4'>
     <div class='nav'>
       {{#each links}}
-        <div class='nav-item'>
-          <a
-            href='{{href}}'
-            class='nav-link'
-            target='_blank'
-          >{{text}}</a>
-        </div>
+        {{#if href}}
+          <div class='nav-item'>
+            <a
+              href='{{href}}'
+              class='nav-link'
+              target='_blank'
+            >{{text}}</a>
+          </div>
+        {{else}}
+          <div class='nav-item'>
+            <a
+              href='#'
+              class='nav-link disabled'
+            >{{text}}</a>
+          </div>
+        {{/if}}
       {{/each}}
-      <div class='nav-item'>
-        <a href='#' class='nav-link disabled'>Disabled</a>
-      </div>
     </div>
   </div>
 {{/with}}
