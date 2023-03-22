@@ -102,10 +102,12 @@
       </div>
     </div>
   </div>
-{{/with}}
-<hr class='my-5' />
-{{! goodsOtherBlock__________________________________________________________________________________________ }}
-{{#with goodsOtherBlock}}
-  <div class='h1 text-center mb-4'>{{title}}</div>
-  {{>shopcard}}
-{{/with}}
+  {{/with}}
+  <hr class="my-5">
+     {{! goodsOtherBlock__________________________________________________________________________________________ }}
+  {{#with goodsOtherBlock}}
+  <div class="h1 text-center mb-4">{{title}}</div>
+    {{>shopcard}}
+  {{/with}}
+      {{>shopaction}}
+
