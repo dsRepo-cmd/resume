@@ -3,7 +3,11 @@
     {{#each breadcrumb}}
       <li class='breadcrumb-item'>
         {{#if url}}
-          <a href='{{url}}' class=''>{{name}}</a>
+          <a
+            target='_blank'
+            href='{{url}}'
+            class=''
+          >{{name}}</a>
         {{else}}
           {{name}}
         {{/if}}
