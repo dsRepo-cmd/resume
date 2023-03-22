@@ -14,7 +14,7 @@
               {{#with surname}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -28,7 +28,7 @@
               {{#with phone}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -43,7 +43,7 @@
               {{#with name}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -57,7 +57,7 @@
               {{#with email}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -67,7 +67,6 @@
                 <div class='form text'><small class="text-muted">{{caption}}</small></div>
               {{/with}}
             </div>
-            {{! <hr class='my-5' /> }}
           {{/with}}
         </div>
         <hr class='my-5' />
@@ -95,14 +94,14 @@
         <div class='row p-3'>
           {{#each select}}
             <div class='col-6'>
-              <label for='' class='form-label'>
+              <label for='' class='form-label h6'>
                 {{label}}</label>
               <select class='form-select' name='' id=''>
-                <option
+                <option selected
                   value='placeholder'
                 >{{placeholder}}</option>
                 {{#each options}}
-                  <option value='value'>{{text}}</option>
+                  <option  value='value'>{{text}}</option>
                 {{/each}}
               </select>
             </div>
@@ -131,7 +130,7 @@
       {{!Оплата_____________________________________________________________________ }}
       <h2 class='mb-3'>Оплата</h2>
       {{#each payment}}
-        <div class='form-check'>
+        <div class='form-check h6'>
           {{type}}
           <input
             name='deliveryButton'
@@ -152,7 +151,7 @@
               {{#with surname}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -166,7 +165,7 @@
               {{#with phone}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -181,7 +180,7 @@
               {{#with name}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -195,7 +194,7 @@
               {{#with email}}
                 <label
                   for=''
-                  class='form-label'
+                  class='form-label h6'
                 >{{lable}}</label>
                 <input
                   type='text'
@@ -212,7 +211,7 @@
       {{!Коментар_____________________________________________________________________ }}
       <div>
         {{#with coment}}
-          <label for='' class='form-label'>{{lable}}</label>
+          <label for='' class='form-label h6'>{{lable}}</label>
           <input
             type='text'
             placeholder='{{placeholder}}'
@@ -229,14 +228,14 @@
       {{#with select}}
         {{#with available_coupon}}
           <div class='col-12 mb-4'>
-            <label for='' class='form-label'>
+            <label for='' class='form-label h6'>
               {{lable}}</label>
             <select
               class='form-select form-select-lg'
               name=''
               id=''
             >
-              <option
+              <option selected
                 value='placeholder'
               >{{placeholder}}</option>
               {{#each options}}
@@ -246,11 +245,11 @@
           </div>
         {{/with}}
         {{#with friend_coupon}}
-          <div class='col-12 mb-4'>
+          <div class='col-12 mb-4 h6'>
             <label for='' class='form-label'>
               {{lable}}</label>
             <select class='form-select form-select-sm' name='' id=''>
-              <option
+              <option selected
                 value='placeholder'
               >{{placeholder}}</option>
               {{#each options}}
@@ -264,7 +263,7 @@
       {{#with add}}
         {{#with friend}}
           <div class='col-12 mb-4'>
-            <label for='' class='form-label'>{{lable}}</label>
+            <label for='' class='form-label h6'>{{lable}}</label>
             <input placeholder="{{placeholder}}" class="form-control form-control-lg" name="" id="">
               <small class="text-muted">{{caption}}</small>
             </input>
@@ -273,7 +272,7 @@
 
         {{#with colleague}}
           <div class='col-12 my-3'>
-            <label for='' class='form-label'>{{lable}}</label>
+            <label for='' class='form-label h6'>{{lable}}</label>
             <input placeholder="{{placeholder}}" class="form-control form-control-sm" name="" id="">
               <small class="text-muted">{{caption}}</small>
             </input>
@@ -287,7 +286,7 @@
     {{#with quiz}}
       <h2 class="mb-3">{{title}}</h2>
       {{#with preference}}
-        <div>{{title}}</div>
+        <div class="mt-4 h6">{{title}}</div>
         {{#each options}}
           <div class='form-check my-2'>
             <label for=''>{{this}}</label>
@@ -300,17 +299,17 @@
         {{/each}}
       {{/with}}
       {{#with your_expirience}}
-        <div class='col-12 my-3'>
-          <label for='' class='form-label'>
+        <div class='col-12  mt-4 '>
+          <label for='' class='form-label h6'>
             {{label}}</label>
             <input placeholder="" class="form-control form-control-lg " name="" id=""></input>
         </div>
       {{/with}}
       {{#with purchase_frequency}}
-        <div class='col-12 my-3'>
-          <div>{{label}}</div>
+        <div class='col-12 mt-4'>
+          <div class="h6">{{label}}</div>
           <select name='' id='' class='form-select'>
-            <option value=''>{{placeholder}}</option>
+            <option selected value=''>{{placeholder}}</option>
             {{#each options}}
               <option value='{{value}}'>{{text}}</option>
             {{/each}}
@@ -318,7 +317,7 @@
         </div>
       {{/with}}
       {{#with factors}}
-        <div class="mb-3 mt-4">{{title}}</div>
+        <div class="mb-3 mt-4 h6">{{title}}</div>
         {{#each options}}
           <div class='form-check my-2'>
             <label for=''>{{this}}</label>
