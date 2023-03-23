@@ -28,25 +28,23 @@
 <hr class='my-5' />
 {{#with goodsOtherBlock}}{{/with}}
 
-{{#with subscribe}}
-  <div class='col-12'>
-    <div class='card text-bg-dark p-3 pe-0'>
-      <div class='row'>
-        <div class='col-8'>
-          <h2>{{header}}</h2>
-          {{description}}
-        </div>
-        <div class='col-3 m-3 ps-5'>
-          {{#each buttons}}
-            <a
-              target='_blank'
-              rel='{{rel}}'
-              class='btn btn-primary m-2'
-              href='{{link}}'
-            >{{text}}</a>
-          {{/each}}
+  {{#with subscribe}}
+      <div class='card text-bg-dark p-3 pe-0'>
+        <div class='row'>
+          <div class='col-8'>
+            <h2>{{header}}</h2>
+            {{description}}
+          </div>
+          <div class='col-4 '>
+            {{#each buttons}}
+              <a
+                target='_blank'
+                rel='{{rel}}'
+                class='btn btn-primary ms-1 mt-3'
+                href='{{link}}'
+              >{{text}}</a>
+            {{/each}}
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-{{/with}}
+  {{/with}}
