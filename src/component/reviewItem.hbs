@@ -1,0 +1,66 @@
+{{#each reviewList}}
+  <div class='card p-3 mb-5'>
+    <div class='row'>
+      <div class='col-12'>
+        <div class='card mb-5'>
+          <ul class='list-group list-group-flush'>
+            <li class='list-group-item'>
+              <div class='row'>
+                <div class='col-6'>
+                  <h4>{{title.userName}}</h4>
+                  <p>{{title.caption}}</p>
+                </div>
+                <dir class='col-6'>
+                  <div
+                    class='text-end pt-4'
+                  >{{title.date}}</div>
+                </dir>
+              </div>
+            </li>
+            {{#with reviewBody}}
+              <li class='list-group-item'>
+                <p class=''>{{seller.title}}:
+                  {{seller.value}}</p>
+                <p class=''>{{rating.title}}:
+                  {{rating.value}}</p>
+                {{#each text}}
+                  <p class=''>{{this}}</p>
+                {{/each}}
+                <b>{{advantages.title}}:</b>
+                <p class=''> {{advantages.text}}</p>
+                <b>{{disadvantages.title}}:</b>
+                <p class=''> {{disadvantages.text}}</p>
+                <div>
+                  {{#each images}}
+                    <img
+                      class='me-2'
+                      src='{{this}}'
+                      alt=''
+                    />
+                  {{/each}}
+                </div>
+              </li>
+            {{/with}}
+          </ul>
+        </div>
+      </div>
+      <div class='col-1'>
+      </div>
+      <div class='col-11'>
+        {{#each reviewBody.coments}}
+          <div class='card my-3 p-2'>
+            <div class='row'>
+              <div class='col-6'>
+                <h5>{{userName}}</h5>
+                <p>{{text}}</p>
+              </div>
+              <div class='col-6 text-end'>
+                {{date}}
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+{{/each}}
