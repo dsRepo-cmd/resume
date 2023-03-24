@@ -12,6 +12,7 @@
   </head>
 {{!-- ---------------------------------------------------------------------------------------------- --}}
   <body class="p-5">
+	{{> navbar}} 
 	{{#with header}}
     <header>
       <div class="mb-2">
@@ -30,12 +31,12 @@
 				{{address}}
 			</address>		
 		</div>
-      <hr class="my-5" />
+      <hr />
     </header>
 	{{/with}}
 	<div class="mb-5">
 		{{!-- {{> nav}}  --}}
-		{{> navbar}} 
+		
 	</div>
     {{{body}}}
 	{{> footer address=header.address firstname=header.name.firstname lastname=header.name.lastname}}

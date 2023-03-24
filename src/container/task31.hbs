@@ -1,18 +1,16 @@
-<main>
-  <section class='row g-5'>
+<main class='ms-4 mt-4'>
+  <section class='row g-3'>
     {{! _________________________________________________________________________________________ }}
     {{#with navigation}}
-      <div class='col-9'>
-        <div class='row'>
-          {{#each links}}
-            <a class='col-1' href='{{href}}'>{{text}}</a>
-          {{/each}}
-          <a
-            class='col-1 btn btn-primary btn-sm'
-            href='{{button.href}}'
-            target='_blank'
-          >{{button.text}}</a>
-        </div>
+      <div class='col-9 pt-3'>
+        {{#each links}}
+          <a class='me-3' href='{{href}}'>{{text}}</a>
+        {{/each}}
+        <a
+          class='col-1 btn btn-primary btn-sm'
+          href='{{button.href}}'
+          target='_blank'
+        >{{button.text}}</a>
       </div>
     {{/with}}
     <hr />

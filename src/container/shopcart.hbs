@@ -26,27 +26,25 @@
 </div>
 {{! goodsOtherBlock______________________________________________________________________________ }}
 <hr class='my-5' />
-
 {{>shopcard}}
-
 <hr class='my-5' />
-  {{#with subscribe}}
-      <div class='card text-bg-dark p-3 pe-0'>
-        <div class='row'>
-          <div class='col-8'>
-            <h2>{{header}}</h2>
-            {{description}}
-          </div>
-          <div class='col-4 '>
-            {{#each buttons}}
-              <a
-                target='_blank'
-                rel='{{rel}}'
-                class='btn btn-primary ms-1 mt-3'
-                href='{{link}}'
-              >{{text}}</a>
-            {{/each}}
-          </div>
-        </div>
+{{#with subscribe}}
+  <div class='card text-bg-dark p-3 pe-0'>
+    <div class='row'>
+      <div class='col-8'>
+        <h2>{{header}}</h2>
+        {{description}}
       </div>
-  {{/with}}
+      <div class='col-4 text-end pe-4'>
+        {{#each buttons}}
+          <a
+            target='_blank'
+            rel='{{rel}}'
+            class='btn btn-primary ms-1 mt-3'
+            href='{{link}}'
+          >{{text}}</a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+{{/with}}
