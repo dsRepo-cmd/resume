@@ -13,7 +13,28 @@
         {{/each}}
       </div>
     </div>
-      {{>shopcard}}
+    {{#each cards}}
+    <div class='col-4 mb-4'>
+      <div class='card h-100 g-4'>
+        <img src='{{image}}' alt='' />
+        <div class='card-body'>
+          <h5>{{title}}
+            {{#if isHot}}
+              <span
+                class='badge text-bg-warning rounded-pill'
+              >HOT!</span>
+            {{/if}}
+            {{#if idNew}}
+              <span
+                class='badge text-bg-primary rounded-pill'
+              >New</span>
+            {{/if}}
+          </h5>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
   {{/with}}
   <hr class='my-5' />
   {{! subscribe___________________________________________________________ }}

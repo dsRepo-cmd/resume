@@ -1,22 +1,25 @@
-{{#each cards}}
-  <div class='col-4 mb-4'>
-    <div class='card h-100 g-4'>
-      <img src='{{image}}' alt='' />
-      <div class='card-body'>
-        <h5>{{title}}
-          {{#if isHot}}
-            <span
-              class='badge text-bg-warning rounded-pill'
-            >HOT!</span>
-          {{/if}}
-          {{#if idNew}}
-            <span
-              class='badge text-bg-primary rounded-pill'
-            >New</span>
-          {{/if}}
-        </h5>
-        <p>{{description}}</p>
+{{#with goodsOtherBlock}}
+  <div class='h1 text-center mb-4'>{{title}}</div>
+  {{#each cards}}
+    <div class='col-4 mb-4'>
+      <div class='card h-100 g-4'>
+        <img src='{{image}}' alt='' />
+        <div class='card-body'>
+          <h5>{{title}}
+            {{#if isHot}}
+              <span
+                class='badge text-bg-warning rounded-pill'
+              >HOT!</span>
+            {{/if}}
+            {{#if idNew}}
+              <span
+                class='badge text-bg-primary rounded-pill'
+              >New</span>
+            {{/if}}
+          </h5>
+          <p>{{description}}</p>
+        </div>
       </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
+{{/with}}
