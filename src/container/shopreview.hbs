@@ -1,0 +1,70 @@
+{{#with formBlock}}
+  <div class='col-8'>
+    <h1 class='mb-3 pb-1'>{{header}}</h1>
+    <p>{{rating.title}}: {{rating.value}}</p>
+    {{! actionBlock____________________________________________________________________ }}
+    {{#with actionBlock}}
+      <div class='nav nav-tabs mb-4'>
+        {{#each tabs}}
+          <div class='nav-item'>
+            <a class='nav-link {{#if isActive}}active{{/if}}' href='#'> {{text}}</a>
+          </div>
+        {{/each}}
+      </div>
+      {{! placeholder____________________________________________________________________ }}
+      <hr class='my-5' />
+      <div class='card'>
+        <div class='row p-4'>
+          <div class='col-6 p-2'>
+            {{field.placeholder}}
+          </div>
+          <div class='col-6 text-end'>
+            <a
+              class='btn btn-secondary'
+              href='{{field.button.link}}'
+            >{{field.button.text}}</a>
+          </div>
+        </div>
+      </div>
+    {{/with}}
+    <hr class='my-5' />
+    {{! feedbackBlock____________________________________________________________________ }}
+    {{#with feedbackBlock}}
+      <h2 class='mb-5'>{{title}}</h2>
+      <div>
+        {{#each buttons}}
+          <a class='btn me-2 {{#if isWarning}}btn-warning{{/if}} {{#if isSuccess}}btn-success{{/if}} {{#if isDanger}}btn-danger{{/if}}' href='{{link}}'>{{text}}</a>
+        {{/each}}
+      </div>
+    {{/with}}
+  </div>
+{{! goodsInfo____________________________________________________________________________________ }}
+  {{#with goodsInfo}}
+    <div class='col-4'>
+      <div class='card p-3'>
+        <div class='pb-3'>
+          <img src='{{photo}}' alt='' />
+        </div>
+        <h5>{{name}}</h5>
+      </div>
+      <div class='card p-3 my-3'>
+        <h4>{{price}}</h4>
+        <p>Є в наявності</p>
+        {{#each buttons}}
+          <div class='mb-2'>
+            <a class='btn me-2 {{#if isSecondary}}btn-secondary{{/if}} {{#if isPrimary}}btn-primary{{/if}}' href='{{link}}'>{{text}}</a>
+          </div>
+        {{/each}}
+      </div>
+      <div class='card p-3'>
+        <div>
+          {{seller.title}}:
+          <strong>{{seller.value}}</strong>
+        </div>
+      </div>
+    </div>
+  {{/with}}
+{{/with}}
+<hr class='my-5' />
+{{>reviewItem}}
+{{>shopaction}}
