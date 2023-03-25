@@ -1,5 +1,5 @@
 <div class='row'>
-  <div class="col-2">
+  <div class="col-4">
     <div class="card h-100">
         <img src='car.jpg' alt='toyota' class='rounded-img' />
         <div class="card-header">
@@ -39,7 +39,7 @@
                 </ul>
               {{/with}}
             </div>
-      </div>
+          </div>
             <div class="card-footer">
              <h2 class="p-3"> Price: {{total}} $</h2>
             </div>
@@ -53,7 +53,6 @@
       </div>
       <div class="card-body">
         {{#with features}}  
-           
             {{#with interior}}
               <h4>seats</h4>
               {{#with seats}}
@@ -184,19 +183,19 @@
       </div>
           {{#with airbags}}
             <div class='card-body'>
-              <h4>airbags </h4>{{airbags}}
-              <div>
-                <b>front: </b>{{front}}
-              </div>
-              <div>
-                <b>side: </b>{{side}}
-              </div>
-              <div>
-                <b>knee: </b>{{knee}}
-              </div>
-              <div>
-                <b>rear: </b>{{rear}}
-              </div>
+            <h4>airbags </h4>{{airbags}}
+            <div>
+              <b>front: </b>{{front}}
+            </div>
+            <div>
+              <b>side: </b>{{side}}
+            </div>
+            <div>
+              <b>knee: </b>{{knee}}
+            </div>
+            <div>
+              <b>rear: </b>{{rear}}
+            </div>
           {{/with}}
             <hr />
           {{#with assistance}}
@@ -231,46 +230,46 @@
     </div>
   </div>
   <div class='col-2'>
-  <div class='card h-100'>
-    <div class='card-header'>
-    <h2 class="p-3">Engine</h2>
+    <div class='card h-100'>
+      <div class='card-header'>
+        <h2 class="p-3">Engine</h2>
       </div>
-  {{#with engine}}
-       <div class='card-body'>
-        <div>
-          <b>type: </b>{{type}}
+          {{#with engine}}
+          <div class='card-body'>
+            <div>
+              <b>type: </b>{{type}}
+            </div>
+            <div>
+              <b>displacement: </b>{{displacement}}
+            </div>
+            <div>
+              <b>horsepower: </b>{{horsepower}}
+            </div>
+            <div>
+              <b>torque: </b>{{torque}}
+            </div>
+            <div>
+              <b>transmission: </b>
+              <ul>
+                <li><b>type: </b> {{transmission.type}}</li>
+                <li><b>gears: </b>{{transmission.gears}} </li>
+              </ul>
+            </div>
+          {{/with}}
+          <hr />
+          {{#with fuel_economy}}
+            <h4>fuel economy</h4>
+            <div>
+              <b>city: </b>{{city}}
+            </div>
+            <div>
+              <b>highway: </b>{{highway}}
+            </div>
+            <div>
+              <b>combined: </b>{{combined}}
+            </div>
+          {{/with}}
         </div>
-        <div>
-          <b>displacement: </b>{{displacement}}
-        </div>
-        <div>
-          <b>horsepower: </b>{{horsepower}}
-        </div>
-        <div>
-          <b>torque: </b>{{torque}}
-        </div>
-        <div>
-          <b>transmission: </b>
-          <ul>
-            <li><b>type: </b> {{transmission.type}}</li>
-            <li><b>gears: </b>{{transmission.gears}} </li>
-          </ul>
-        </div>
-  {{/with}}
-  <hr />
-  {{#with fuel_economy}}
-    <h4>fuel economy</h4>
-      <div>
-        <b>city: </b>{{city}}
-      </div>
-      <div>
-        <b>highway: </b>{{highway}}
-      </div>
-      <div>
-        <b>combined: </b>{{combined}}
-      </div>
     </div>
-  {{/with}}
-  </div>
   </div>
 </div>
