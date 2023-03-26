@@ -1,7 +1,8 @@
+
 <div class='row'>
   <div class="col-4">
     <div class="card h-100">
-        <img src='car.jpg' alt='toyota' class='rounded-img' />
+        <img src='https://picsum.photos/400/200' alt='toyota' class='rounded-img' />
         <div class="card-header">
           <h1 class=''>{{make}} <i>{{model}}</i></h1>
           <div class='p-4'>
@@ -13,27 +14,27 @@
         {{#with price}}
           <h3></h3>
             <div>
-              <b>base: </b>{{base}}
+              base: {{base}}
               $
             </div>
             <div>
-              <b>destination: </b>{{destination}}
+              destination: {{destination}}
               $
             </div>
             <div>
-              <b>options: </b>
+              options: 
               {{#with options}}
                 <ul>
                   <li>
-                    <b>navigation: </b>{{navigation}}
+                    navigation: {{navigation}}
                     $
                   </li>
                   <li>
-                    <b>moonroof: </b>{{moonroof}}
+                    moonroof: {{moonroof}}
                     $
                   </li>
                   <li>
-                    <b>premium_paint: </b>{{premium_paint}}
+                    premium_paint: {{premium_paint}}
                     $
                   </li>
                 </ul>
@@ -56,10 +57,10 @@
             {{#with interior}}
               <h4>seats</h4>
               {{#with seats}}
-                <div> <b>material:</b> {{material}}</div>
-                <div> <b> color:</b> {{color}}</div>
+                <div> material: {{material}}</div>
+                <div>  color: {{color}}</div>
                 <div>
-                  <b>any:</b>
+                  any:
                   {{#if heated}} heated {{/if}}
                   ,{{#if ventilated}} ventilated {{/if}}
                 </div>
@@ -68,15 +69,15 @@
               {{#with dashboard}}
                 <h4>dashboard</h4>
                 <div>
-                  <b>material:</b>
+                  material:
                   {{material}}
                 </div>
                 <div>
-                  <b>color:</b>
+                  color:
                   {{color}}
                 </div>
                 {{#with display}}
-                  <b>display:</b>
+                  display:
                   <ul>
                     <li>
                       type:
@@ -101,20 +102,20 @@
               {{#with audio}}
                 <h4>audio</h4>
                 <div>
-                  <b>system: </b>{{system}}
+                  system: {{system}}
                 </div>
                 <div>
-                  <b>speakers: </b>{{speakers}}
+                  speakers: {{speakers}}
                 </div>
                 <div>
-                  <b>subwoofer: </b>
+                  subwoofer: 
                   {{#if subwoofer}}yes{{/if}}
                 </div>
                 <div>
-                  <b>bluetooth: </b>{{#if bluetooth}}yes{{/if}}
+                  bluetooth: {{#if bluetooth}}yes{{/if}}
                 </div>
                 <div>
-                  <b>USB: </b>{{#if USB}}yes{{/if}}
+                  USB: {{#if USB}}yes{{/if}}
                 </div>
             {{/with}}
           {{/with}}
@@ -131,15 +132,15 @@
         {{#with wheels}}
           <h4>wheels</h4>
           <div>
-            <b>size: </b>
+            size: 
             {{size}}
           </div>
           <div>
-            <b>type: </b>
+            type: 
             {{type}}
           </div>
           <div>
-            <b>color: </b>
+            color: 
             {{color}}
           </div>
         {{/with}}
@@ -147,13 +148,13 @@
         {{#with headlights}}
           <h4>headlights</h4>
           <div>
-            <b>type:</b>{{type}}
+            type: {{type}}
           </div>
           <div>
-            <b>brightness:</b>{{brightness}}
+            brightness: {{brightness}}
           </div>
           <div>
-            <b>automatic:</b>
+            automatic:
             {{#if automatic}} yes {{/if}}
           </div>
         {{/with}}
@@ -161,13 +162,13 @@
         {{#with sunroof}}
           <h4>sunroof</h4>
           <div>
-            <b>type:</b>{{type}}
+            type: {{type}}
           </div>
           <div>
-            <b>size:</b>{{size}}
+            size: {{size}}
           </div>
           <div>
-            <b>automatic:</b>
+            automatic:
             {{#if automatic}} yes {{/if}}
           </div>
         {{/with}}
@@ -185,41 +186,41 @@
             <div class='card-body'>
             <h4>airbags </h4>{{airbags}}
             <div>
-              <b>front: </b>{{front}}
+              front: {{front}}
             </div>
             <div>
-              <b>side: </b>{{side}}
+              side: {{side}}
             </div>
             <div>
-              <b>knee: </b>{{knee}}
+              knee: {{knee}}
             </div>
             <div>
-              <b>rear: </b>{{rear}}
+              rear: {{rear}}
             </div>
           {{/with}}
             <hr />
           {{#with assistance}}
               <h4>assistance</h4>
               <div>
-                <b>blind_spot_monitoring:</b>
+                blind_spot_monitoring:
                 {{#if blind_spot_monitoring}} yes {{/if}}
               </div>
               <div>
-                <b>rear_cross_traffic_alert:</b>
+                rear_cross_traffic_alert:
                 {{#if rear_cross_traffic_alert}} yes {{/if}}
               </div>
               <div>
-                <b>lane_departure_warning:</b>{{#if
+                lane_departure_warning:{{#if
                   lane_departure_warning
                 }} yes {{/if}}
               </div>
               <div>
-                <b>adaptive_cruise_control:</b>{{#if
+                adaptive_cruise_control:{{#if
                   adaptive_cruise_control
                 }} yes {{/if}}
               </div>
               <div>
-                <b>collision_warning:</b>{{#if
+                collision_warning:{{#if
                   collision_warning
                 }} yes {{/if}}
               </div>
@@ -237,22 +238,22 @@
           {{#with engine}}
           <div class='card-body'>
             <div>
-              <b>type: </b>{{type}}
+              type: {{type}}
             </div>
             <div>
-              <b>displacement: </b>{{displacement}}
+              displacement: {{displacement}}
             </div>
             <div>
-              <b>horsepower: </b>{{horsepower}}
+              horsepower: {{horsepower}}
             </div>
             <div>
-              <b>torque: </b>{{torque}}
+              torque: {{torque}}
             </div>
             <div>
-              <b>transmission: </b>
+              transmission: 
               <ul>
-                <li><b>type: </b> {{transmission.type}}</li>
-                <li><b>gears: </b>{{transmission.gears}} </li>
+                <li>type:  {{transmission.type}}</li>
+                <li>gears: {{transmission.gears}} </li>
               </ul>
             </div>
           {{/with}}
@@ -260,13 +261,13 @@
           {{#with fuel_economy}}
             <h4>fuel economy</h4>
             <div>
-              <b>city: </b>{{city}}
+              city: {{city}}
             </div>
             <div>
-              <b>highway: </b>{{highway}}
+              highway: {{highway}}
             </div>
             <div>
-              <b>combined: </b>{{combined}}
+              combined: {{combined}}
             </div>
           {{/with}}
         </div>
