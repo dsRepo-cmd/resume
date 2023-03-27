@@ -19,10 +19,12 @@
       crossorigin='anonymous'
     />
     {{!-- ------------------------------------------------------------------------------------------------- --}}
-    <body class="ps-4 pt-2">
+    <body class=" ms-4 me-3">
         {{!-- {{> nav}} --}}
          {{> navbar}}
+         <div class="ms-3">
         {{{body}}}
+         </div>
       {{> footer address=header.address firstname=header.name.firstname lastname=header.name.lastname}}
     </body>
 </html>

@@ -7,7 +7,7 @@
         <div class='col-12'>
           <div class='card mb-3'>
             <div class='card-header'>
-              <h5>{{name}}</h5>
+              <h6>{{name}}</h6>
             </div>
             <div class='card-body'>
               <div>
@@ -27,13 +27,13 @@
         </div>
         {{! ---Friends--------------------------------------------------------------------------------- }}
         <div class='col-6'>
-            <h3>Friends</h3>
+            <h4>Friends</h4>
           <div class='card p-3 mb-3'>
             
             {{#each friends}}
-               <div class='card mb-3'> 
+               <div class='card mb-3 '> 
               <div class='card-header'>
-                <h5>{{name}}</h5>
+                <h6>{{name}}</h6>
               </div>
               <div class='card-body'>
                 <div>
@@ -49,12 +49,12 @@
                   {{id}}
                 </div>
               </div>
-              <div class='p-4'> 
-              <h5> Mutual friends</h5>
+              <div class='p-4  pe-5'> 
+              <h6> Mutual friends</h6>
               {{#each mutual_friends}}
-                <div class='card mb-3'>
+                <div class='card mb-3 '>
                   <div class='card-header'>
-                    <h5>{{name}}</h5>
+                    <h6>{{name}}</h6>
                   </div>
                   <div class='card-body'>
                     <div>
@@ -81,12 +81,12 @@
         {{! ---Groups--------------------------------------------------------------------------------- }}
         <div class='col-6'>
           {{#if groups}}
-            <h3>Groups</h3>
+            <h4>Groups</h4>
             <div class='card p-3 mb-3'> 
             {{#each groups}}
               <div class='card mb-3'>
                 <div class='card-header'>
-                  <h5>{{name}}</h5>
+                  <h6>{{name}}</h6>
                 </div>
                 <div class='card-body'>
                   <div>
@@ -97,12 +97,12 @@
                     {{id}}
                   </div>
                 </div>
-                <div class='p-4'>
-                  <h5>Members </h5>
+                <div class='p-4 pe-5 '>
+                  <h6>Members </h6>
                   {{#each members}}
-                    <div class='card mb-3'>
+                    <div class='card mb-3 '>
                       <div class='card-header'>
-                        <h5>{{name}}</h5>
+                        <h6>{{name}}</h6>
                       </div>
                       <div class='card-body'>
                         <div>
@@ -121,7 +121,6 @@
                     </div>
                   {{/each}}
                 </div>
-
               </div>
             {{/each}}
           {{/if}}
