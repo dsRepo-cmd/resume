@@ -3,55 +3,35 @@
   <hr />
   {{#each users}}
     <div class='col-6'>
-      <h3>User</h3>
-      <div class='card mb-3'>
-        <div class='card-header'>
-          <h5>{{name}}</h5>
-        </div>
-        <div class='card-body'>
-          <div>
-            gender:
-            {{gender}}
-          </div>
-          <div>
-            age:
-            {{age}}
-          </div>
-          <div>
-            id:
-            {{id}}
-          </div>
-        </div>
-      </div>
-      <hr />
-      {{! ---Friends--------------------------------------------------------------------------------- }}
-
-      <div class='card p-3 mb-3'> 
-              <h3>Friends</h3>
-      {{#each friends}}
-        <div class='card mb-3'>
-          <div class='card-header'>
-            <h5>{{name}}</h5>
-          </div>
-          <div class='card-body'>
-            <div>
-              gender:
-              {{gender}}
+      <div class='row'>
+        <div class='col-12'>
+          <div class='card mb-3'>
+            <div class='card-header'>
+              <h5>{{name}}</h5>
             </div>
-            <div>
-              age:
-              {{age}}
-            </div>
-            <div>
-              id:
-              {{id}}
+            <div class='card-body'>
+              <div>
+                gender:
+                {{gender}}
+              </div>
+              <div>
+                age:
+                {{age}}
+              </div>
+              <div>
+                id:
+                {{id}}
+              </div>
             </div>
           </div>
         </div>
-        <div class='p-4'>
-          <h3> Mutual friends</h3>
-          {{#each mutual_friends}}
-            <div class='card mb-3'>
+        {{! ---Friends--------------------------------------------------------------------------------- }}
+        <div class='col-6'>
+            <h3>Friends</h3>
+          <div class='card p-3 mb-3'>
+            
+            {{#each friends}}
+               <div class='card mb-3'> 
               <div class='card-header'>
                 <h5>{{name}}</h5>
               </div>
@@ -69,64 +49,87 @@
                   {{id}}
                 </div>
               </div>
-            </div>
-           </div>
-          {{/each}}
-        {{! </div> }}
-      {{/each}}
-        </div>
-      {{! ---Friends end------------------------------------------------------------------------------ }}
-      {{! ---Groups--------------------------------------------------------------------------------- }}
-      {{! <div class='p-4'> }}
-      {{#if groups}}
-      <div class='card p-3 mb-3'> 
-        <h3>Groups</h3>
-        {{#each groups}}
-          <div class='card'>
-            <div class='card-header'>
-              <h5>{{name}}</h5>
-            </div>
-            <div class='card-body'>
-              <div>
-                description:
-                {{description}}
-              </div>
-              <div>
-                id:
-                {{id}}
-              </div>
-            </div>
+              <div class='p-4'> 
+              <h5> Mutual friends</h5>
+              {{#each mutual_friends}}
+                <div class='card mb-3'>
+                  <div class='card-header'>
+                    <h5>{{name}}</h5>
+                  </div>
+                  <div class='card-body'>
+                    <div>
+                      gender:
+                      {{gender}}
+                    </div>
+                    <div>
+                      age:
+                      {{age}}
+                    </div>
+                    <div>
+                      id:
+                      {{id}}
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </div> 
+              {{/each}}
+            {{/each}}
           </div>
-          <div class='p-4'>
-            <h3>Members </h3>
-            {{#each members}}
+        </div>
+        {{! ---Friends end------------------------------------------------------------------------------ }}
+        {{! ---Groups--------------------------------------------------------------------------------- }}
+        <div class='col-6'>
+          {{#if groups}}
+            <h3>Groups</h3>
+            <div class='card p-3 mb-3'> 
+            {{#each groups}}
               <div class='card mb-3'>
                 <div class='card-header'>
                   <h5>{{name}}</h5>
                 </div>
                 <div class='card-body'>
                   <div>
-                    gender:
-                    {{gender}}
-                  </div>
-                  <div>
-                    age:
-                    {{age}}
+                    {{description}}
                   </div>
                   <div>
                     id:
                     {{id}}
                   </div>
                 </div>
+                <div class='p-4'>
+                  <h5>Members </h5>
+                  {{#each members}}
+                    <div class='card mb-3'>
+                      <div class='card-header'>
+                        <h5>{{name}}</h5>
+                      </div>
+                      <div class='card-body'>
+                        <div>
+                          gender:
+                          {{gender}}
+                        </div>
+                        <div>
+                          age:
+                          {{age}}
+                        </div>
+                        <div>
+                          id:
+                          {{id}}
+                        </div>
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
+
               </div>
             {{/each}}
-          </div>
-          {{! </div> }}
-        {{/each}}
-      {{/if}}
-      {{! ---Groups end------------------------------------------------------------------------------- }}
+          {{/if}}
+        </div>
+        {{! ---Groups end------------------------------------------------------------------------------- }}
+      </div>
     </div>
     </div>
   {{/each}}
 </div>
-{{! </div> }}
+</div>
