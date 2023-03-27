@@ -30,6 +30,31 @@ var footer = {
     },
   },
 }
+var page = [
+  'shophome',
+  'shopproduct',
+  'shopnews',
+  'shoporder',
+  'shopcart',
+  'Shopprofile',
+  'shopreview',
+  'shopcatalog',
+  'summary',
+  'skills',
+  'education',
+  'work',
+  'person',
+  'bio',
+  'program',
+  'web',
+  'js',
+  'car',
+  'mac',
+  'facebook',
+  'task21',
+  'task22',
+  'task31',
+]
 
 // ================================================================
 
@@ -43,31 +68,7 @@ router.get('/', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
     layout: 'index',
-    page: [
-      'shophome',
-      'shopproduct',
-      'shopnews',
-      'shoporder',
-      'shopcart',
-      'Shopprofile',
-      'shopreview',
-      'shopcatalog',
-      'summary',
-      'skills',
-      'education',
-      'work',
-      'person',
-      'bio',
-      'program',
-      'web',
-      'js',
-      'car',
-      'mac',
-      'facebook',
-      'task21',
-      'task22',
-      'task31',
-    ],
+    page,
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
