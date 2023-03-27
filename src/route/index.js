@@ -41,7 +41,34 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    page: [
+      'shophome',
+      'shopproduct',
+      'shopnews',
+      'shoporder',
+      'shopcart',
+      'Shopprofile',
+      'shopreview',
+      'shopcatalog',
+      'summary',
+      'skills',
+      'education',
+      'work',
+      'person',
+      'bio',
+      'program',
+      'web',
+      'js',
+      'car',
+      'mac',
+      'facebook',
+      'task21',
+      'task22',
+      'task31',
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 

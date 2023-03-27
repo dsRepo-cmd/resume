@@ -1,9 +1,15 @@
-{{! Default page body }}
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
+<h2>List of pages</h2>
+<p class='mb-5'>A list of pages that I created during my
+  HTML studies</p>
+{{! ______________________________________________________________________ }}
+<div class='col-1'>
+  {{#each page}}
+    <div class='row'>
+      <a
+        target='_blank'
+        class='btn btn-primary btn-sm btn-block mb-2 text-capitalize'
+        href='/{{this}}'
+      >{{this}}</a>
+    </div>
+  {{/each}}
 </div>

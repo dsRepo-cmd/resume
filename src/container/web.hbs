@@ -1,83 +1,98 @@
 {{#with web}}
   {{#each languages}}
-    <h1>{{name}}</h1>
-    <ul>
-      <li>
-        <div>ver: {{version}}</div>
-        <br />
-        <div><b>{{description}}</b> </div>
-        <br />
-        {{! |HTML|------------------------------------------------------------------ }}
-        {{#each elements}}
-          <h3>Elements: "{{name}}"</h3>
-          <ul>
-            <li>
-              {{description}}
-              <hr />
-              <ul>
-                {{#each attributes}}
-                  <li>
-                    <div>
-                      <strong> {{name}} </strong>
-                      -
-                      {{description}}
-                    </div>
-                    <br />
-                  </li>
-                {{/each}}
-              </ul>
-            </li>
-          </ul>
-        {{/each}}
-        {{! -HTML---------------------------------------------------------------------- }}
-        {{! -CSS---------------------------------------------------------------------- }}
-        {{#each properties}}
-          <h3>Properties: "{{name}}"</h3>
-          <ul>
-            <li>
-              {{description}}
-              <hr />
-              <ul>
-                {{#each values}}
-                  <li>
-                    <div>
-                      <strong> {{value}} </strong>
-                      -
-                      {{description}}
-                    </div>
-                    <br />
-                  </li>
-                {{/each}}
-              </ul>
-            </li>
-          </ul>
-        {{/each}}
-        {{! -CSS---------------------------------------------------------------------- }}
-        {{! -JavaScript---------------------------------------------------------------------- }}
-        {{#each functions}}
-          <h3>Properties: "{{name}}"</h3>
-          <ul>
-            <li>
-              {{description}}
-              <hr />
-              <ul>
-                {{#each parameters}}
-                  <li>
-                    <div>
-                      <b> {{name}}</b>
-                      ({{type}})-
-                      {{description}}
-                    </div>
-                    <br />
-                  </li>
-                {{/each}}
-              </ul>
-            </li>
-          </ul>
-        {{/each}}
-        {{! -JavaScript---------------------------------------------------------------------- }}
-      </li>
-    </ul>
-    <hr />
+    <div class='col-4'>
+      <div class='card h-100'>
+        <div
+          class='card-header'
+          style='background-color: rgb(246, 233, 225);'
+        >
+          <h1>{{name}}</h1>
+          <div>ver: {{version}}</div>
+        </div>
+        <div class='card-body'>
+          <br />
+          <div><b>{{description}}</b> </div>
+          <br />
+          {{! |HTML|------------------------------------------------------------------ }}
+
+          {{#each elements}}
+            <div class='card mb-3'>
+              <div class='card-header'>
+                <h3>Elements: "{{name}}"</h3>
+              </div>
+              <div class='card-body'>
+
+                {{description}}
+
+                <hr />
+                <ul>
+                  {{#each attributes}}
+                    <li>
+                      <div>
+                        <strong> {{name}} </strong>
+                        -
+                        {{description}}
+                      </div>
+                      <br />
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          {{/each}}
+          {{! -HTML---------------------------------------------------------------------- }}
+          {{! -CSS---------------------------------------------------------------------- }}
+          {{#each properties}}
+            <div class='card mb-3'>
+              <div class='card-header'>
+                <h3>Properties: "{{name}}"</h3>
+              </div>
+              <div class='card-body'>
+                {{description}}
+                <hr />
+                <ul>
+                  {{#each values}}
+                    <li>
+                      <div>
+                        <strong> {{value}} </strong>
+                        -
+                        {{description}}
+                      </div>
+                      <br />
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          {{/each}}
+          {{! -CSS---------------------------------------------------------------------- }}
+          {{! -JavaScript---------------------------------------------------------------------- }}
+          {{#each functions}}
+            <div class='card mb-3'>
+              <div class='card-header'>
+                <h3>Properties: "{{name}}"</h3>
+              </div>
+              <div class='card-body'>
+                {{description}}
+                <hr />
+                <ul>
+                  {{#each parameters}}
+                    <li>
+                      <div>
+                        <b> {{name}}</b>
+                        ({{type}})-
+                        {{description}}
+                      </div>
+                      <br />
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          {{/each}}
+          {{! -JavaScript---------------------------------------------------------------------- }}
+        </div>
+      </div>
+    </div>
   {{/each}}
 {{/with}}
