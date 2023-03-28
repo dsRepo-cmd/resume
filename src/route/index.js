@@ -12,7 +12,7 @@ var header = {
     lastname: 'Dovgopol',
   },
   position: 'Junior Fullstack JS Developer',
-  salary: '600$ в місяц',
+  salary: '600$ per month',
 }
 var footer = {
   social: {

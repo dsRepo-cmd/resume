@@ -1,78 +1,76 @@
-<div>
-	{{#with main}}
-  <main>
-    <section>
-		{{>title data="Work history" big=true }}
-    <div>
-      <ul class="my-3">
-      {{#each works}}
-        <li>
-            <div class="h5" >
-              {{position}}
+{{#with main}}
+<main>
+  <section>
+  {{>title data="Work history" big=true }}
+  <div>
+    <ul class="my-3">
+    {{#each works}}
+      <li>
+          <div class="h5" >
+            {{position}}
+          </div>
+          <div>
+            {{duration.from}} - 
+              {{#if duration.to}} 
+                {{duration.to}} 
+                {{else}} 
+                  in prosess 
+              {{/if}} 
+          </div>
+          <div class="my-3">
+            {{#if company.url}}
+              {{> link text=company.name href=company.url blank=true noLine=true }}
+            {{else}}
+              <b> {{company.name}} </b>
+            {{/if}}
             </div>
-            <div>
-              {{duration.from}} - 
-                {{#if duration.to}} 
-                  {{duration.to}} 
-                  {{else}} 
-                    in prosess 
-                {{/if}} 
-            </div>
-            <div class="my-3">
-              {{#if company.url}}
-                {{> link text=company.name href=company.url blank=true noLine=true }}
-              {{else}}
-                <b> {{company.name}} </b>
-              {{/if}}
-              </div>
-            <div class="h6">
-              Projects: ({{projectAmount}})
-            </div>
-                <ul class="my-3">
-                  {{#each projects}} 
-                  <li>
-                    <div>
-                      {{> link text=name href=url blank=true noLine=true }}
-                  </div>
+          <div class="h6">
+            Projects: ({{projectAmount}})
+          </div>
+              <ul class="my-3">
+                {{#each projects}} 
+                <li>
                   <div>
-                    <p> {{about}} </p>
-                  </div>
-                  <div>
-                    <em class="h6">
-                      Project stacks ({{stackAmount}})
-                    </em>
-                  </div>
-                  <div>
+                    {{> link text=name href=url blank=true noLine=true }}
+                </div>
+                <div>
+                  <p> {{about}} </p>
+                </div>
+                <div>
+                  <em class="h6">
+                    Project stacks ({{stackAmount}})
+                  </em>
+                </div>
+                <div>
+                  <ul class="my-3">
+                    {{#each stacks}}
+                    <li>
+                      {{name}}
+                    </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div>
+                  <em class="h6">
+                    Project awards  ({{awardAmount}}) 
+                  </em>
+                </div>
+                <div>
                     <ul class="my-3">
-                      {{#each stacks}}
-                      <li>
-                        {{name}}
-                      </li>
-                      {{/each}}
-                    </ul>
-                  </div>
-                  <div>
-                    <em class="h6">
-                     Project awards  ({{awardAmount}}) 
-                    </em>
-                  </div>
-                  <div>
-                      <ul class="my-3">
-                      {{#each awards}}
-                      <li>
-                        {{name}}
-                      </li>
-                      {{/each}}
-                    </ul>
-                  </div>
-                  </li>
-                  {{/each}}
-                </ul>
-        </li>
-      {{/each}}
-      </ul>
-    </div>
-      </section>
-  </main>
-	{{/with}}
-</div>
+                    {{#each awards}}
+                    <li>
+                      {{name}}
+                    </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                </li>
+                {{/each}}
+              </ul>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+    </section>
+</main>
+{{/with}}

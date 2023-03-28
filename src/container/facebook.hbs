@@ -3,39 +3,19 @@
   <hr />
   {{#each users}}
     <div class='col-6'>
-      <div class='row'>
-        <div class='col-12'>
-          <div class='card mb-3'>
-            <div class='card-header'>
-              <h6>{{name}}</h6>
-            </div>
-            <div class='card-body'>
-              <div>
-                gender:
-                {{gender}}
-              </div>
-              <div>
-                age:
-                {{age}}
-              </div>
-              <div>
-                id:
-                {{id}}
-              </div>
-            </div>
-          </div>
-        </div>
-        {{! ---Friends--------------------------------------------------------------------------------- }}
-        <div class='col-6'>
-            <h4>Friends</h4>
-          <div class='card p-3 mb-3'>
-            
-            {{#each friends}}
-               <div class='card mb-3 '> 
+      <div class='card p-2'>
+        <div class='row'>
+          <div class='col-12'>
+            <div class='card mb-3'>
               <div class='card-header'>
-                <h6>{{name}}</h6>
-              </div>
-              <div class='card-body'>
+                <div class='row'>
+                  <div class='col-6'>
+                    <h6>{{name}} </h6>
+                  </div>
+                  <div class='col-6 text-end'>
+                    <i> # {{id}}</i>
+                  </div>
+                </div>
                 <div>
                   gender:
                   {{gender}}
@@ -44,67 +24,45 @@
                   age:
                   {{age}}
                 </div>
-                <div>
-                  id:
-                  {{id}}
-                </div>
               </div>
-              <div class='p-4  pe-5'> 
-              <h6> Mutual friends</h6>
-              {{#each mutual_friends}}
-                <div class='card mb-3 '>
-                  <div class='card-header'>
-                    <h6>{{name}}</h6>
-                  </div>
-                  <div class='card-body'>
-                    <div>
-                      gender:
-                      {{gender}}
-                    </div>
-                    <div>
-                      age:
-                      {{age}}
-                    </div>
-                    <div>
-                      id:
-                      {{id}}
-                    </div>
-                  </div>
-                </div>
-                </div>
-                </div> 
-              {{/each}}
-            {{/each}}
+            </div>
           </div>
-        </div>
-        {{! ---Friends end------------------------------------------------------------------------------ }}
-        {{! ---Groups--------------------------------------------------------------------------------- }}
-        <div class='col-6'>
-          {{#if groups}}
-            <h4>Groups</h4>
-            <div class='card p-3 mb-3'> 
-            {{#each groups}}
+          {{! ---Friends--------------------------------------------------------------------------------- }}
+          <div class='col-6'>
+            <h4>Friends</h4>
+            {{#each friends}}
               <div class='card mb-3'>
                 <div class='card-header'>
-                  <h6>{{name}}</h6>
-                </div>
-                <div class='card-body'>
-                  <div>
-                    {{description}}
+                  <div class='row'>
+                    <div class='col-6'>
+                      <h6>{{name}} </h6>
+                    </div>
+                    <div class='col-6 text-end'>
+                      <i> # {{id}}</i>
+                    </div>
                   </div>
                   <div>
-                    id:
-                    {{id}}
+                    gender:
+                    {{gender}}
+                  </div>
+                  <div>
+                    age:
+                    {{age}}
                   </div>
                 </div>
-                <div class='p-4 pe-5 '>
-                  <h6>Members </h6>
-                  {{#each members}}
-                    <div class='card mb-3 '>
+                <div class='p-4 pe-5'>
+                  <h6> Mutual friends</h6>
+                  {{#each mutual_friends}}
+                    <div class='card mb-3'>
                       <div class='card-header'>
-                        <h6>{{name}}</h6>
-                      </div>
-                      <div class='card-body'>
+                        <div class='row'>
+                          <div class='col-6'>
+                            <h6>{{name}} </h6>
+                          </div>
+                          <div class='col-6 text-end'>
+                            <i> # {{id}}</i>
+                          </div>
+                        </div>
                         <div>
                           gender:
                           {{gender}}
@@ -113,22 +71,64 @@
                           age:
                           {{age}}
                         </div>
-                        <div>
-                          id:
-                          {{id}}
-                        </div>
                       </div>
                     </div>
                   {{/each}}
                 </div>
               </div>
             {{/each}}
-          {{/if}}
+          </div>
+          {{! ---Friends end------------------------------------------------------------------------------ }}
+          {{! ---Groups--------------------------------------------------------------------------------- }}
+          <div class='col-6'>
+            {{#if groups}}
+              <h4>Groups</h4>
+              {{#each groups}}
+                <div class='card mb-3'>
+                  <div class='card-header'>
+                    <h6>{{name}}</h6>
+                  </div>
+                  <div class='card-body'>
+                    <div>
+                      {{description}}
+                    </div>
+                    <div>
+                      id:
+                      {{id}}
+                    </div>
+                  </div>
+                  <div class='p-4 pe-5'>
+                    <h6>Members </h6>
+                    {{#each members}}
+                      <div class='card mb-3'>
+                        <div class='card-header'>
+                          <div class='row'>
+                            <div class='col-6'>
+                              <h6>{{name}} </h6>
+                            </div>
+                            <div class='col-6 text-end'>
+                              <i> # {{id}}</i>
+                            </div>
+                          </div>
+
+                          <div>
+                            gender:
+                            {{gender}}
+                          </div>
+                          <div>
+                            age:
+                            {{age}}
+                          </div>
+                        </div>
+                      </div>
+                    {{/each}}
+                  </div>
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
         </div>
-        {{! ---Groups end------------------------------------------------------------------------------- }}
       </div>
     </div>
-    </div>
   {{/each}}
-</div>
 </div>

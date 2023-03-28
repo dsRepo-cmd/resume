@@ -4,7 +4,7 @@
     {{#with location}}
       <div><address>{{country}}, {{city}} </address> </div>
     {{/with}}
-    <div> <time> {{date}} </time> </div>
+    <div> <time> <i>{{date}}</i> </time> </div>
     <hr />
     {{#each program}}
       <h2>{{name}}
@@ -52,7 +52,6 @@
         {{! ------------------------------------------------------------------------------------ }}
         {{#with venue}}
           <h3>{{name}}</h3>
-          Adress:
           {{#with location}}
             <address>
               {{country}}
