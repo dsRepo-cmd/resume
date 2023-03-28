@@ -1,25 +1,25 @@
-  {{#each itemList}}
-    <div class='col-4 mt-2'>
-      <p>{{number}}</p>
-      <h6>{{status}}</h6>
-    </div>
-    <div class='col-2 mt-3'>
-      <p>{{amount.title}}</p>
-      <h6>{{amount.value}}</h6>
-    </div>
-    <div class='col-4'>
-      <div class='row'>
-        {{#each images}}
-          <div class='col-3 mt-2'>
-            <div class='card'>
-              <img class='card-img' src='{{this}}' alt='' />
-            </div>
+{{#each itemList}}
+  <div class='col-4 mt-2'>
+    <p>{{number}}</p>
+    <h6>{{status}}</h6>
+  </div>
+  <div class='col-2 mt-3'>
+    <p>{{amount.title}}</p>
+    <h6>{{amount.value}}</h6>
+  </div>
+  <div class='col-4'>
+    <div class='row'>
+      {{#each images}}
+        <div class='col-3 mt-2'>
+          <div class='card'>
+            <img class='card-img' src='{{this}}' alt='' />
           </div>
-        {{/each}}
-      </div>
+        </div>
+      {{/each}}
     </div>
-    <div class='col-2 pt-2 mt-2'>
-      <a href="{{button.link}}" class="mt-4 btn {{#if button.isPrimary}}btn-primary{{/if}}">{{button.text}}</a>
-    </div>
-    <hr class='mt-2' />
-  {{/each}}
+  </div>
+  <div class='col-2 pt-2 mt-2'>
+    <a href="{{button.link}}" class="mt-4 btn {{#if button.isPrimary}}btn-primary{{/if}}">{{button.text}}</a>
+  </div>
+  <hr class='mt-2' />
+{{/each}}

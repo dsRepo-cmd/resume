@@ -19,13 +19,14 @@
       integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD'
       crossorigin='anonymous'
     />
+    </head>
     {{!-- ------------------------------------------------------------------------------------------------- --}}
     <body class=" ms-5 me-3">
-        {{!-- {{> nav}} --}}
-         {{> navbar}}
-         <div class="ms-3">
+      {{!-- {{> nav}} --}}
+      {{> navbar}}
+      <div class="ms-3">
         {{{body}}}
-         </div>
+      </div>
       {{> footer address=header.address firstname=header.name.firstname lastname=header.name.lastname}}
     </body>
 </html>
