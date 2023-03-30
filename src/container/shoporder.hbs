@@ -79,7 +79,7 @@
               <input
                 name='1'
                 type='checkbox'
-                class='form-check-input'
+                class='form-check-input' {{#if isActive}} checked {{/if}}
               />
             </div>
           {{/each}}
@@ -113,8 +113,8 @@
           <div class='col-6 my-2'>
             <div class='form-check'>
               {{type}}
-              <input
-                name='deliveryButton'
+              <input {{#if @first}}checked{{/if}}
+                name='deliveryCheck'
                 type='radio'
                 class='form-check-input'
               />
@@ -131,8 +131,8 @@
       {{#each payment}}
         <div class='form-check h6'>
           {{type}}
-          <input
-            name='deliveryButton'
+          <input {{#if @first}}checked{{/if}}
+            name='PayCheck'
             type='radio'
             class='form-check-input'
           />
@@ -284,6 +284,7 @@
           <div class='form-check my-2'>
             <label for=''>{{this}}</label>
             <input
+             {{#if @first}}checked{{/if}}
               name='1'
               type='radio'
               class='form-check-input'
@@ -310,16 +311,68 @@
         </div>
       {{/with}}
       {{#with factors}}
-        <div class="mb-3 mt-4 h6">{{title}}</div>
-        {{#each options}}
+        <div class="mb-3 mt-4 h6">{{title}} </div>
+        {{!-- {{#each options}}
           <div class='form-check my-2'>
-            <label for=''>{{this}}</label>
+            <label for=''>{{this}}  </label>
             <input
+            {{#if @first}}checked{{/if}}
               class='form-check-input'
               type='checkbox'
             />
           </div>
-        {{/each}}
+        {{/each}} --}}
+        <div class='form-check my-2'>
+          <label for=''>{{options.[0]}}  </label>
+          <input
+            checked
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[1]}}  </label>
+          <input
+          checked
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[2]}}  </label>
+          <input
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[3]}}  </label>
+          <input
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[4]}}  </label>
+          <input
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[5]}}  </label>
+          <input
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
+        <div class='form-check my-2'>
+          <label for=''>{{options.[6]}}  </label>
+          <input
+            class='form-check-input'
+            type='checkbox'
+          />
+        </div>
       {{/with}}
     {{/with}}
   </div>
