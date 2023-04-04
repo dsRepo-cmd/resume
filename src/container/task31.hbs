@@ -2,12 +2,15 @@
   <section class='row g-3'>
     {{! _________________________________________________________________________________________ }}
     {{#with navigation}}
-      <div class='col-9 pt-3'>
+      <div class='col-12 pt-3'>
         {{#each links}}
-          <a class='me-3' href='{{href}}'>{{text}}</a>
+          <a
+            class='me-3 text-decoration-none'
+            href='{{href}}'
+          >{{text}}</a>
         {{/each}}
         <a
-          class='col-1 btn btn-primary btn-sm'
+          class='btn btn-primary btn-sm'
           href='{{button.href}}'
           target='_blank'
         >{{button.text}}</a>
@@ -106,11 +109,11 @@
             <div class='card-header h-100'>
               {{name}}
             </div>
-            {{#each items}}
-              <ul class='list-group list-group-flush'>
+            <ul class='list-group list-group-flush'>
+              {{#each items}}
                 <li class='list-group-item'>{{this}}</li>
-              </ul>
-            {{/each}}
+              {{/each}}
+            </ul>
           </div>
         </div>
       {{/each}}
