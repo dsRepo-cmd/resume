@@ -8,3 +8,6 @@ body {
   /* font-family: 'Delicious Handrawn', cursive; */
   font-family: 'Shantell Sans', cursive;
 }
+.btn_main {
+  min-width: 150px;
+}
