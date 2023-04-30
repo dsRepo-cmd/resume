@@ -36,7 +36,7 @@ var page = [
   'shopnews',
   'shoporder',
   'shopcart',
-  'Shopprofile',
+  'shopprofile',
   'shopreview',
   'shopcatalog',
   'summary',
@@ -55,10 +55,6 @@ var page = [
   'task22',
   'task31',
 ]
-
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 
