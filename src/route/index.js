@@ -3834,8 +3834,8 @@ router.get('/resume', function (req, res) {
     email: 'sergiidovgopoly@gmail.com',
     phone: '+380685534209',
     address: 'Кyiv, Ukraine',
-    site: 'github.com',
-    linkedIn: 'linledin.com',
+    site: 'Github',
+    linkedIn: 'Linledin',
     skills: {
       title: 'Skills',
       skill: [

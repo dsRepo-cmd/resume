@@ -31,24 +31,41 @@
   <aside class='aside'>
     <div class='block'>
       <span class='block_title'>Personal details</span>
-      <div class='block_content'>
-        <span class='block_info'>LinkedIn</span>
-        <span class='block_text'>{{linkedIn}}</span>
+      <div class='block_content ico__pos'>
+        <div
+          class='ico'
+          style="background-image: url('./svg/link.svg');"
+        ></div>
+        {{! <span class='block_info'>LinkedIn</span> }}
+        <a
+          href='https://www.linkedin.com/in/sergii-dovgopol-5720a6278/'
+          class='block_text'
+        >{{linkedIn}}</a>
       </div>
-      <div class='block_content'>
-        <span class='block_info'>GitHub</span>
-        <span class='block_text'>{{site}}</span>
+      <div class='block_content ico__pos'>
+        <div
+          class='ico'
+          style="background-image: url('./svg/git.svg');"
+        ></div>
+        {{! <span class='block_info'>GitHub</span> }}
+        <a
+          href='https://github.com/dsRepo-cmd'
+          class='block_text'
+        >{{site}}</a>
       </div>
     </div>
     <hr />
     <div class='block'>
       {{#with skills}}
         <span class='block_title'>{{title}}</span>
-        <div class='block_list'>
+        <ul class='block_list'>
+
           {{#each skill}}
-            <span class='block_text'>{{this}}</span>
+            <li>
+              <span class='block_text'>{{this}}</span>
+            </li>
           {{/each}}
-        </div>
+        </ul>
       {{/with}}
     </div>
 
