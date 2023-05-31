@@ -1113,6 +1113,24 @@ router.get('/bootstrap', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
     layout: 'bootstrap',
+    name: 'Sergii',
+    lastname: 'Dovgopol',
+    occupation: 'Full Stack Dev',
+    email: 'sergiidovgopoly@gmail.com',
+    phone: '+380685534209',
+    address: 'Кyiv, Ukraine',
+    site: 'github.com',
+    linkedIn: 'linledin.com',
+    skills: {
+      name: 'Skills',
+      skill: [
+        'HTML5 CSS3 JavaScript',
+        'React Angular Vue.js',
+        'Sass Less',
+        'Git and version control systems',
+        'Basic knowledge of SEO and optimization for search engines',
+      ],
+    },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
