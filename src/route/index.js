@@ -31,6 +31,7 @@ var footer = {
   },
 }
 var page = [
+  'resume',
   'shophome',
   'shopproduct',
   'shopnews',
@@ -1106,35 +1107,6 @@ router.get('/facebook', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-router.get('/bootstrap', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('bootstrap', {
-    layout: 'bootstrap',
-    name: 'Sergii',
-    lastname: 'Dovgopol',
-    occupation: 'Full Stack Dev',
-    email: 'sergiidovgopoly@gmail.com',
-    phone: '+380685534209',
-    address: 'Кyiv, Ukraine',
-    site: 'github.com',
-    linkedIn: 'linledin.com',
-    skills: {
-      name: 'Skills',
-      skill: [
-        'HTML5 CSS3 JavaScript',
-        'React Angular Vue.js',
-        'Sass Less',
-        'Git and version control systems',
-        'Basic knowledge of SEO and optimization for search engines',
-      ],
-    },
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-// ================================================================
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -3849,5 +3821,110 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+// ================================================================
+router.get('/resume', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('resume', {
+    layout: 'resume',
+    name: 'Sergii',
+    lastname: 'Dovgopol',
+    occupation: 'Full Stack Dev',
+    email: 'sergiidovgopoly@gmail.com',
+    phone: '+380685534209',
+    address: 'Кyiv, Ukraine',
+    site: 'github.com',
+    linkedIn: 'linledin.com',
+    skills: {
+      title: 'Skills',
+      skill: [
+        'HTML5 CSS3 JavaScript',
+        'React Angular Vue.js',
+        'Sass Less',
+        'Git and version control systems',
+        'Basic knowledge of SEO and optimization for search engines',
+      ],
+    },
+    summary: {
+      title: 'Summary',
+      text: `I am a junior front-end developer with a passion for programming microcontrollers, assembling and repairing computers, and a strong foundation in full-stack development. Eager to apply my knowledge and skills to create engaging and user-friendly web applications. A quick learner with excellent problem-solving abilities and a commitment to continuous self-improvement.`,
+    },
+    languages: {
+      title: 'Languages',
+      content: [
+        {
+          name: 'English',
+          value: 'intermediate',
+          text: `I can communicate with the clients and discuss work issues, take part in daily meetings`,
+        },
+      ],
+    },
+    projects: {
+      title: 'Projects',
+      content: [
+        {
+          name: 'E-Commerce Website',
+          text: [
+            'Developed a responsive e-commerce website using HTML5, CSS3, and JavaScript.',
+            'Implemented product listing, shopping cart functionality, and checkout process.',
+            'Utilized Bootstrap framework to create a visually appealing and user-friendly interface.',
+          ],
+        },
+
+        {
+          name: 'Maintenance of electronic equipment',
+          text: [
+            'Built a weather application using React.js and consumed data from a weather API.',
+            'Implemented product listing, shopping cart functionality, and checkout process.',
+            `Implemented geolocation functionality to provide real-time weather updates based on the user's location.`,
+            `Designed an intuitive user interface with interactive weather forecast displays.`,
+          ],
+        },
+      ],
+    },
+    educations: {
+      title: 'Educations',
+      content: [
+        {
+          name: 'Full stack developer',
+          text: 'IT School "IT-Brains"',
+          date: null,
+          description: null,
+        },
+
+        {
+          name: 'Maintenance of electronic equipment',
+          text: 'Kyiv Industrial and Economic College of the National Aviation University',
+          date: null,
+          description: null,
+        },
+      ],
+    },
+    hobbies: {
+      title: 'Hobbies',
+      content: [
+        {
+          name: 'Computer Assembly and Repair Technician',
+          text: [
+            `Assembled and configured custom computers based on client requirements.`,
+            `Diagnosed hardware and software issues and provided effective solutions.`,
+            `Conducted thorough testing to ensure the functionality and performance of assembled systems.`,
+          ],
+        },
+        {
+          name: 'Microcontroller Programming Hobbyist',
+          text: [
+            `Developed various projects involving microcontrollers, including home automation systems and IoT devices.`,
+            `Programmed microcontrollers using Arduino and Raspberry Pi platforms.`,
+            `Utilized sensors and actuators to create interactive and automated systems.`,
+          ],
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// ================================================================
 // ================================================================
 module.exports = router

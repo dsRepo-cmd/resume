@@ -1,12 +1,13 @@
 :root {
-  --size-1: 14px;
+  --size-1: 16px;
   --size-2: 18px;
   --size-3: 22px;
   --size-4: 26px;
   --size-5: 30px;
   --size-6: 34px;
   --size-7: 38px;
-  --size-8: 40px;
+  --size-8: 42px;
+  --size-9: 44px;
 
   --color-white-light: rgb(172, 172, 172);
   --color-white: rgb(242, 242, 242);
@@ -17,22 +18,27 @@
   --space-1: 12px;
   --space-2: 16px;
   --space-3: 20px;
-  --space-4: 24px;
+  --space-4: 22px;
   --space-5: 28px;
   --space-6: 32px;
   --space-7: 36px;
   --space-8: 40px;
+  --space-9: 60px;
 }
 hr {
   border: 0;
   border-top: 2px solid var(--color-divider);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
 }
 .page {
   padding: 30px;
   display: grid;
+  max-width: 1200px;
+  margin: auto;
 }
 .header {
-  padding: var(--space-8);
+  padding: var(--space-8) var(--space-9);
   background-color: #303846;
   border-radius: 4px;
 }
@@ -45,17 +51,17 @@ hr {
   color: rgb(190, 190, 190);
 }
 .content {
-  padding: var(--space-8);
+  padding: var(--space-1);
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
 }
 .aside {
-  height: 1000px;
-  padding: 20px;
-  border-left: 1px solid var(--color-divider);
+  height: 100%;
+  padding: 40px 20px 40px 0px;
+  border-right: 1px solid var(--color-divider);
 }
 main {
-  padding: 20px;
+  padding: 40px;
 }
 .header_info {
   display: flex;
@@ -89,7 +95,9 @@ main {
   gap: var(--size-2);
 }
 .block_title {
-  font-size: var(--size-3);
+  font-size: var(--size-4);
+  font-weight: 600;
+  color: #606468;
 }
 
 .block_content {
@@ -99,6 +107,11 @@ main {
 .block_info {
   font-size: var(--size-1);
   color: var(--color-dark-light);
+}
+.block_name {
+  font-size: var(--size-2);
+  color: #606468;
+  font-weight: 500;
 }
 .block_text {
   font-size: var(--size-1);
